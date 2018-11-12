@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "4618ed6a-7faf-43f2-be6b-d02032685335",
+		"name": "PublicChat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "some_user_name${{$randomInt}}",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "small text",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/posts/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add post with error",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "some_user_name${{$randomInt}}",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "huuugetext over 200 charactershuuugetext over 200 charactershuuugetext over 200 charactershuuugetext over 200 charactershuuugetext over 200 charactershuuugetext over 200 charactershuuugetext over 200 characters",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/posts/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all posts Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "4fcc9a9c-4619-4de6-a72a-b57a6d0aef4b",
+			"key": "user",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "626e3d0f-15a9-4f3e-b774-896d1cc0a2bb",
+			"key": "post",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
