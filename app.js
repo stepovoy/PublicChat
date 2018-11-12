@@ -17,7 +17,7 @@ app.use('/posts', postsRoutes);
 
 // error handler
 app.use((err, req, res, next) => {
-    res.status(500).json({err: '123'});
+    res.status(500).json({err: 'Error occured'});
 });
 
 module.exports = app;
