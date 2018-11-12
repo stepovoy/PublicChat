@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/stepovoy/PublicChat#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "mysql2": "^1.6.4",
     "sequelize": "^4.41.2",
